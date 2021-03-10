@@ -59,7 +59,7 @@ namespace RomanCalculator.Tests
 		[TestCase("XIXIXIX")]
 		[TestCase("MCMCMCMCMC")]
 		[TestCase("")] //ugh, go on with it... :)
-		public void ValidateRomanNumber_ValidNumber_ThrowsException(string invalidRomanNumeral)
+		public void ValidateRomanNumber_InvalidNumber_ThrowsException(string invalidRomanNumeral)
 		{
 			Assert.Throws(Is.TypeOf<ArgumentException>()
 					.And.Message.EqualTo($"[{invalidRomanNumeral}] is not a valid roman number"),
